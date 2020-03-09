@@ -48,6 +48,14 @@ describe GildedRose do
           expect(item.quality).to eq 8
         end
       end
+
+      context "and sell in is passed" do
+        let(:initial_sell_in) { -2 }
+    
+        it "decreases quality by 4" do
+          expect(item.quality).to eq 6
+        end
+      end
     end
 
     context "when item name is 'Aged Brie'" do
