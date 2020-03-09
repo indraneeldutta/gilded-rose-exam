@@ -38,6 +38,18 @@ describe GildedRose do
       end
     end
 
+    context "when item name is 'Conjured'" do 
+      let(:name) { 'Conjured' }
+  
+      context "and sell in is 10 days" do
+        let(:initial_sell_in) { 10 }
+  
+        it "decreases quality by 2" do
+          expect(item.quality).to eq 8
+        end
+      end
+    end
+
     context "when item name is 'Aged Brie'" do
       let(:name) { 'Aged Brie' }
 
